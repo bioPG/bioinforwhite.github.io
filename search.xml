@@ -4,12 +4,167 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <title>R-基础（一）：数据结构</title>
+      <link href="/posts/7fa6ac17.html"/>
+      <url>/posts/7fa6ac17.html</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<p>R拥有许多用于存储数据的对象类型，包括<strong>标量、向量、矩阵、数组、数据框和列表</strong>。它们在存储数据的类型、创建方式、结构复杂度，以及用于<strong>定位</strong>和<strong>访问</strong>其中个别元素的标记等方面均有所不同。下图是一张R语言数据结构图。</p><p><img src="/images/20191016203612522-1571620529681-1571620531411.png" alt=""></p><h1 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h1><p><strong>定义：</strong></p><ul><li>用于存储数值型、字符型或逻辑型数据的一维数组。向量中的<strong>元素类型必须全为数值型或者字符型或者逻辑型</strong>。向量中的单个元素称为标量，属于特殊的向量。</li></ul><p>向量是R语言中最基础，也是最重要的数据类型。</p><h2 id="向量类型"><a href="#向量类型" class="headerlink" title="向量类型"></a>向量类型</h2><ul><li>数值型向量：向量中的元素全为数字</li><li>字符型向量：向量中的元素既可以全为字符，也可以包含数字，但是这里的数字是字符串，并不是数值。</li><li>逻辑型向量：向量中的元素只有两种<code>TURE</code>或者<code>FALSE</code></li></ul><h2 id="向量的创建"><a href="#向量的创建" class="headerlink" title="向量的创建"></a>向量的创建</h2><p>数值型向量的创建</p><pre><code>c(1,2,3,4,5,6)                 1:6rep(1,3) # 重复1三次rep(1:3,3) # 重复(1,2,3)三次rep(1:3,each = 3) # 重复1,2,3各三次c(rep(1:3,3),rep(1:3,each = 3)) # 合并向量</code></pre><p>字符型向量的创建</p><pre><code>b = c(&quot;one&quot;, &quot;two&quot;, &quot;three&quot;)b## [1] &quot;one&quot;   &quot;two&quot;   &quot;three&quot;</code></pre><p>逻辑型向量的创建</p><pre><code>c = c(TRUE, TRUE, TRUE, FALSE, TRUE, FALSE)c## [1]  TRUE  TRUE  TRUE FALSE  TRUE FALSE</code></pre><h2 id="向量中元素的访问"><a href="#向量中元素的访问" class="headerlink" title="向量中元素的访问"></a>向量中元素的访问</h2><pre><code>a = c(&quot;k&quot;, &quot;j&quot;, &quot;h&quot;, &quot;a&quot;, &quot;c&quot;, &quot;m&quot;)a[2] #向量a中第二个元素## [1] &quot;j&quot;a[c(1,2,3)] #向量a中前3个元素## [1] &quot;k&quot; &quot;j&quot; &quot;h&quot;a[1:3] #向量a中前3个元素## [1] &quot;k&quot; &quot;j&quot; &quot;h&quot;</code></pre><h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><p><strong>定义：</strong></p><ul><li>矩阵是二维数组，矩阵中的元素都拥有相同的类型。大多数情况下，我们使用的矩阵就是<strong>数值型矩阵</strong>，矩阵中的元素全为数值，矩阵也可以理解为折叠起来的数值型向量。</li></ul><h2 id="矩阵的创建"><a href="#矩阵的创建" class="headerlink" title="矩阵的创建"></a>矩阵的创建</h2><pre><code>rnames = c(&#39;r1&#39;,&#39;r2&#39;,&#39;r3&#39;,&#39;r4&#39;,&#39;r5&#39;,&#39;r6&#39;)cnames = c(&#39;c1&#39;,&#39;c2&#39;,&#39;c3&#39;,&#39;c4&#39;,&#39;c5&#39;)myymatrix &lt;- matrix(1:30,                       nrow=6,                     ncol=5,                     byrow=F, # 默认按列填充                    dimnames=list(rnames, cnames)) # 行名和列名myymatrix##    c1 c2 c3 c4 c5## r1  1  7 13 19 25## r2  2  8 14 20 26## r3  3  9 15 21 27## r4  4 10 16 22 28## r5  5 11 17 23 29## r6  6 12 18 24 30</code></pre><h2 id="矩阵下标的使用"><a href="#矩阵下标的使用" class="headerlink" title="矩阵下标的使用"></a>矩阵下标的使用</h2><p>提取矩阵中第2行</p><pre><code>a1 = myymatrix[2,]a1## c1 c2 c3 c4 c5 ##  2  8 14 20 26</code></pre><p>提取矩阵中的1，3，5行</p><pre><code>a2 = myymatrix[c(1,3,5),]a2##    c1 c2 c3 c4 c5## r1  1  7 13 19 25## r3  3  9 15 21 27## r5  5 11 17 23 29</code></pre><p>提取矩阵中第2列</p><pre><code>b1 = myymatrix[,2]b1## r1 r2 r3 r4 r5 r6 ##  7  8  9 10 11 12</code></pre><p>提取矩阵中的2，4，5列</p><pre><code>b2 = myymatrix[,c(2,4,5)]b2##    c2 c4 c5## r1  7 19 25## r2  8 20 26## r3  9 21 27## r4 10 22 28## r5 11 23 29## r6 12 24 30</code></pre><p>提取任意子矩阵</p><pre><code>data = myymatrix[1:4,2:4]data##    c2 c3 c4## r1  7 13 19## r2  8 14 20## r3  9 15 21## r4 10 16 22</code></pre><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p><strong>定义：</strong></p><ul><li>数组和矩阵基本上属于一种数据类型，矩阵是特殊的数组，而数组一般指三维及以上。数组在R语言中用的很少，所以这里只写出数组的创建方法。</li></ul><h3 id="数组的创建"><a href="#数组的创建" class="headerlink" title="数组的创建"></a>数组的创建</h3><pre><code>dim1 = c(&#39;A1&#39;,&#39;A2&#39;)dim2 = c(&#39;B1&#39;,&#39;B2&#39;,&#39;B3&#39;)dim3 = c(&#39;C1&#39;,&#39;C2&#39;,&#39;C3&#39;,&#39;C4&#39;)data = array(1:24,             dim = c(2,3,4),             dimnames = list(dim1,dim2,dim3)) #相当于创建4个2行3列的矩阵data## , , C1## ##    B1 B2 B3## A1  1  3  5## A2  2  4  6## ## , , C2## ##    B1 B2 B3## A1  7  9 11## A2  8 10 12## ## , , C3## ##    B1 B2 B3## A1 13 15 17## A2 14 16 18## ## , , C4## ##    B1 B2 B3## A1 19 21 23## A2 20 22 24</code></pre><h1 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h1><p><strong>定义：</strong></p><ul><li>数据框和矩阵结构相似，由行列组成，数据框中每一列为一个成分，数据框中的成分类型分为两种：一种是向量，另外一种是因子。</li></ul><p>数据框是R中最常见的数据结构之一，一般数据处理都是基于数据框。</p><h2 id="数据框的创建"><a href="#数据框的创建" class="headerlink" title="数据框的创建"></a>数据框的创建</h2><pre><code>patientID &lt;- c(1, 2, 3, 4)age &lt;- c(25, 34, 28, 52)diabetes &lt;- c(&quot;Type1&quot;, &quot;Type2&quot;, &quot;Type1&quot;, &quot;Type1&quot;)status &lt;- c(&quot;Poor&quot;, &quot;Improved&quot;, &quot;Excellent&quot;, &quot;Poor&quot;)patientdata &lt;- data.frame(patientID, age, diabetes, status)patientdata##   patientID age diabetes    status## 1         1  25    Type1      Poor## 2         2  34    Type2  Improved## 3         3  28    Type1 Excellent## 4         4  52    Type1      Poor</code></pre><h2 id="选取数据框的元素"><a href="#选取数据框的元素" class="headerlink" title="选取数据框的元素"></a>选取数据框的元素</h2><p>数据框中常见的元素选择方法有三种。</p><p><strong>方法一：</strong> 和矩阵下标的使用一样，不再过多介绍。</p><p><strong>方法二：</strong></p><ul><li><p>变量名筛选</p><p>```<br>patientdata[,c(‘age’,’diabetes’)]</p><h2 id="age-diabetes"><a href="#age-diabetes" class="headerlink" title="age diabetes"></a>age diabetes</h2><h2 id="1-25-Type1"><a href="#1-25-Type1" class="headerlink" title="1  25    Type1"></a>1  25    Type1</h2><h2 id="2-34-Type2"><a href="#2-34-Type2" class="headerlink" title="2  34    Type2"></a>2  34    Type2</h2><h2 id="3-28-Type1"><a href="#3-28-Type1" class="headerlink" title="3  28    Type1"></a>3  28    Type1</h2><h2 id="4-52-Type1"><a href="#4-52-Type1" class="headerlink" title="4  52    Type1"></a>4  52    Type1</h2></li></ul><pre><code>**方法三：**- 使用`attach()`函数和`deteach()`函数</code></pre><p>  attach(mtcars)<br>  plot(mpg, disp)<br>  detach(mtcars)</p><pre><code>![](/images/20191016203639311-1571620552405-1571620554030.png)- 使用`with()`函数，`with()`函数使用有一个缺点，`with()`函数里面赋值给对象需要用`&lt;&lt;-`，不能用`&lt;-`或者`=`，只有这样才可以将对象保存到全局环境中。</code></pre><p>  with(mtcars, {<br>    plot(mpg, disp)<br>  })</p><pre><code>![](/images/20191016203708325-1571620562535-1571620563962.png)# 因子在我们处理的数据中，通常将数据框中的列（成分）也称为`变量`或者属性，而行称为观测或者示例，在R中把数据框的列叫做变量更普遍。变量是统计学中的名词，在数据框中变量既可以是向量，也可以是`因子`。变量通常有三种类型，名义型（类别型）、有序型和连续型变量。**变量类型：**- 名义型变量：性别有男女之分，体型有胖瘦之别，这些都是名义型（类别型）变量- 有序型变量：癌症的分期有早期、中期和晚期，变量中的值有顺序之分，称为有序变量- 连续型变量：人的体重就是连续型变量，表现为一定范围内的任意值，与数值型向量等价。**名义型变量**和**有序性变量**在R中统称为`因子`## 因子的创建`factor()`函数创建名义型因子</code></pre><p>sex = c(“male”, “female”, “male”, “female”)<br>sex = factor(sex)<br>sex;class(sex)</p><h2 id="1-male-female-male-female"><a href="#1-male-female-male-female" class="headerlink" title="[1] male   female male   female"></a>[1] male   female male   female</h2><h2 id="Levels-female-male"><a href="#Levels-female-male" class="headerlink" title="Levels: female male"></a>Levels: female male</h2><h2 id="1-“ordered”-“factor”"><a href="#1-“ordered”-“factor”" class="headerlink" title="[1] “ordered” “factor”"></a>[1] “ordered” “factor”</h2><pre><code>`factor()`函数创建有序型因子</code></pre><p>status = c(“early”, “middle”, “late”, “late”)<br>status = factor(status,<br>                order=TRUE,<br>                levels=c(“early”, “middle”, “late”))<br>status;class(status)</p><pre><code></code></pre><h2 id="1-early-middle-late-late"><a href="#1-early-middle-late-late" class="headerlink" title="[1] early  middle late   late"></a>[1] early  middle late   late</h2><h2 id="Levels-early-lt-middle-lt-late"><a href="#Levels-early-lt-middle-lt-late" class="headerlink" title="Levels: early &lt; middle &lt; late"></a>Levels: early &lt; middle &lt; late</h2><h2 id="1-“ordered”-“factor”-1"><a href="#1-“ordered”-“factor”-1" class="headerlink" title="[1] “ordered” “factor”"></a>[1] “ordered” “factor”</h2><pre><code>有时候需要将因子名称用数字表示，这时候就需要对因子重命名</code></pre><p>type = c(“Type1”,”Type1”,”Type2”,”Type1”,”Type2”)<br>type = factor(type,levels = c(“Type1”,”Type2”),labels = c(1,2))</p><pre><code># 列表**定义：**- 列表是R语言中高级数据类型，列表是一些`对象`的有序集合，对象为任何一种数据类型。列表中的对象可以是向量、矩阵、数组、数据框和因子，甚至列表中也可以包含列表。## 列表的创建一般使用`list()`函数来创建列表</code></pre><p>g = “My First List”<br>h = c(25, 26, 18, 39)<br>j = matrix(1:10, nrow=5)<br>k = c(“one”, “two”, “three”)<br>mylist = list(title=g, ages=h, j, k)<br>mylist</p><h2 id="title"><a href="#title" class="headerlink" title="$title"></a>$title</h2><h2 id="1-“My-First-List”"><a href="#1-“My-First-List”" class="headerlink" title="[1] “My First List”"></a>[1] “My First List”</h2><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h2 id="ages"><a href="#ages" class="headerlink" title="$ages"></a>$ages</h2><h2 id="1-25-26-18-39"><a href="#1-25-26-18-39" class="headerlink" title="[1] 25 26 18 39"></a>[1] 25 26 18 39</h2><h2 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h2><h2 id="3"><a href="#3" class="headerlink" title="[[3]]"></a>[[3]]</h2><h2 id="1-2"><a href="#1-2" class="headerlink" title="[,1] [,2]"></a>[,1] [,2]</h2><h2 id="1-1-6"><a href="#1-1-6" class="headerlink" title="[1,]    1    6"></a>[1,]    1    6</h2><h2 id="2-2-7"><a href="#2-2-7" class="headerlink" title="[2,]    2    7"></a>[2,]    2    7</h2><h2 id="3-3-8"><a href="#3-3-8" class="headerlink" title="[3,]    3    8"></a>[3,]    3    8</h2><h2 id="4-4-9"><a href="#4-4-9" class="headerlink" title="[4,]    4    9"></a>[4,]    4    9</h2><h2 id="5-5-10"><a href="#5-5-10" class="headerlink" title="[5,]    5   10"></a>[5,]    5   10</h2><h2 id="-2"><a href="#-2" class="headerlink" title=" "></a> </h2><h2 id="4"><a href="#4" class="headerlink" title="[[4]]"></a>[[4]]</h2><h2 id="1-“one”-“two”-“three”"><a href="#1-“one”-“two”-“three”" class="headerlink" title="[1] “one”   “two”   “three”"></a>[1] “one”   “two”   “three”</h2><pre><code>## 列表中对象的提取使用`mylist$age`和`mylist[[2]]`都表示提取`向量h`</code></pre><p>mylist$age;mylist$age == mylist[[2]]</p><h2 id="1-25-26-18-39-1"><a href="#1-25-26-18-39-1" class="headerlink" title="[1] 25 26 18 39"></a>[1] 25 26 18 39</h2><h2 id="1-TRUE-TRUE-TRUE-TRUE"><a href="#1-TRUE-TRUE-TRUE-TRUE" class="headerlink" title="[1] TRUE TRUE TRUE TRUE"></a>[1] TRUE TRUE TRUE TRUE</h2><p>```</p><h1 id="处理对象的通用函数"><a href="#处理对象的通用函数" class="headerlink" title="处理对象的通用函数"></a>处理对象的通用函数</h1><div class="table-container"><table><thead><tr><th style="text-align:left">函数</th><th style="text-align:left">作用</th></tr></thead><tbody><tr><td style="text-align:left"><code>length(object)</code></td><td style="text-align:left">显示对象中元素/成分的数量</td></tr><tr><td style="text-align:left"><code>str(object)</code></td><td style="text-align:left">显示某个对象的结构</td></tr><tr><td style="text-align:left"><code>class(object)</code></td><td style="text-align:left">显示某个对象的类型</td></tr><tr><td style="text-align:left"><code>head(object)</code></td><td style="text-align:left">列出某个对象的开始部分</td></tr><tr><td style="text-align:left"><code>tail(object)</code></td><td style="text-align:left">列出某个对象的最后部分</td></tr><tr><td style="text-align:left"><code>ls()</code></td><td style="text-align:left">显示当前的对象列表</td></tr><tr><td style="text-align:left"><code>rm(object, object, ...)</code></td><td style="text-align:left">删除一个或更多个对象。语句<code>rm(list = ls())</code>将删除当前工作环境中的几乎所有对象</td></tr></tbody></table></div><h1 id="特殊数据"><a href="#特殊数据" class="headerlink" title="特殊数据"></a>特殊数据</h1><div class="table-container"><table><thead><tr><th>格式</th><th>含义</th><th>查看</th></tr></thead><tbody><tr><td><code>NA</code></td><td>缺失值</td><td><code>is.na()</code></td></tr><tr><td><code>NaN</code></td><td>非数字，如<code>0/0</code></td><td><code>is.nan()</code></td></tr><tr><td><code>Inf</code></td><td>无穷数，如<code>1/0</code></td><td><code>is.infinite()</code></td></tr><tr><td><code>NULL</code></td><td>空数据</td><td><code>is.null()</code></td></tr></tbody></table></div><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><blockquote><p>R语言实战（二）</p></blockquote>]]></content>
       
+      
+      <categories>
+          
+          <category> R </category>
+          
+          <category> R-基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用工具</title>
+      <link href="/posts/787e3980.html"/>
+      <url>/posts/787e3980.html</url>
+      
+        <content type="html"><![CDATA[<p>typora</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 实用工具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数学</title>
+      <link href="/posts/fe7e69f4.html"/>
+      <url>/posts/fe7e69f4.html</url>
+      
+        <content type="html"><![CDATA[<p>数学</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数学 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>limma包差异表达</title>
+      <link href="/posts/cf16ec5c.html"/>
+      <url>/posts/cf16ec5c.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="非原始芯片数据差异表达"><a href="#非原始芯片数据差异表达" class="headerlink" title="非原始芯片数据差异表达"></a>非原始芯片数据差异表达</h1><h2 id="GSE13507数据下载到表达矩阵"><a href="#GSE13507数据下载到表达矩阵" class="headerlink" title="GSE13507数据下载到表达矩阵"></a>GSE13507数据下载到表达矩阵</h2><h3 id="GSE13507数据下载"><a href="#GSE13507数据下载" class="headerlink" title="GSE13507数据下载"></a>GSE13507数据下载</h3><pre><code>setwd(&quot;./1.GEO_datasets/GSE13507&quot;)library(GEOquery)  gset = getGEO(&#39;GSE13507&#39;,destdir = &#39;.&#39;,getGPL = F,                AnnotGPL = T)  gset = gset[[1]]    expr = exprs(gset)        # 表达矩阵  pdata = pData(gset)       # 样本信息  gset@annotation           # 查看芯片平台</code></pre><h3 id="在GEO网站下载探针注释文件"><a href="#在GEO网站下载探针注释文件" class="headerlink" title="在GEO网站下载探针注释文件"></a>在GEO网站下载探针注释文件</h3><pre><code>probe = read.table(file = &#39;GPL6102-11574.txt&#39;,                     sep = &#39;\t&#39;,                     quote = &#39;&#39;,                     comment.char = &#39;#&#39;, # 过滤掉&#39;GPL6102-11574.txt&#39;文件中以‘#’开头的注释信息                     header = T,                     fill = T,           #  如果文件中某行的数据少于其他行，则自动添加空白域。                          stringsAsFactors = F) # 字符串不改为因子ids = probe[probe$Symbol != &#39;&#39;,              c(1,13)] # 提取探针和geneID</code></pre><h3 id="筛选探针"><a href="#筛选探针" class="headerlink" title="筛选探针"></a>筛选探针</h3><pre><code>library(dplyr)  colnames(ids)  expr = as.data.frame(expr)  expr$ID = rownames(expr)  #ids = ids[-grep(&#39;///&#39;,ids$Gene.Symbol),]      # 一个探针对应多个基因，去除  exprSet = inner_join(ids,expr,by = &#39;ID&#39;)   #  探针没有对应基因，去除library(limma)  exprSet= avereps(exprSet[,-c(1,2)],          # 多个探针对应一个基因，取均值                   ID = exprSet$Symbol)  exprSet = as.data.frame(exprSet)pdf(file = &#39;rowbox.pdf&#39;)  p &lt;- boxplot(exprSet,outline=FALSE,las=2,col = &#39;blue&#39;,xaxt = &#39;n&#39;,ann = F)  title(main = list(&#39;Before normalization&#39;,cex = 2 ,font = 2),  xlab = list(&#39;Sample list&#39;,cex = 1.5,font = 2),  ylab = &#39;&#39;,line = 0.7)  mtext(&#39;Expression value&#39;,side = 2,padj = -3,font = 2,cex = 1.5)  dev.off()</code></pre><p><img src="/images/1570064431325.png" alt=""></p><h3 id="分位数标准化"><a href="#分位数标准化" class="headerlink" title="分位数标准化"></a>分位数标准化</h3><pre><code>library(limma)  normalized_expr = normalizeBetweenArrays(exprSet) # 分位数标准化 method默认为quantile  #rt=log2(rt) 有时还需log2变换pdf(file = &#39;normalized_box.pdf&#39;)  p1 &lt;- boxplot(normalized_expr,outline=FALSE,las=2,col = &#39;red&#39;,xaxt = &#39;n&#39;,ann = F)  title(main = list(&#39;Normalization&#39;,cex = 2 ,font = 2),        xlab = list(&#39;Sample list&#39;,cex = 1.5,font = 2),        ylab = &#39;&#39;,line = 0.7)  mtext(&#39;Expression value&#39;,side = 2,padj = -3,font = 2,cex = 1.5)  dev.off()</code></pre><p><img src="/images/1570064471270.png" alt="分位数标准化"></p><h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><pre><code>group_list = pdata$title  #table(pdata$title) # 查看样品信息  control      = normalized_expr[,grep(&#39;Control&#39;,group_list)]  surrounding  = normalized_expr[,grep(&#39;Surrounding&#39;,group_list)]  cancer       = normalized_expr[,grep(&#39;cancer&#39;,group_list)]  tumor        = normalized_expr[,grep(&#39;tumor&#39;,group_list)]  exprSet1 = cbind(cancer,tumor,control,surrounding)  group_list = c(rep(&#39;tumor&#39;,ncol(cancer) + ncol(tumor)),                 rep(&#39;normal&#39;,ncol(control) + ncol(surrounding)))</code></pre><h2 id="差异表达"><a href="#差异表达" class="headerlink" title="差异表达"></a>差异表达</h2><h3 id="表达矩阵"><a href="#表达矩阵" class="headerlink" title="表达矩阵"></a>表达矩阵</h3><pre><code>data = exprSet1</code></pre><h3 id="分组矩阵"><a href="#分组矩阵" class="headerlink" title="分组矩阵"></a>分组矩阵</h3><pre><code>group_list = factor(group_list)design &lt;- model.matrix( ~0 + group_list)colnames( design ) = levels(group_list)rownames( design ) = colnames(data)contrast.matrix &lt;- makeContrasts( &quot;tumor-normal&quot;, levels = design)</code></pre><h3 id="差异表达矩阵"><a href="#差异表达矩阵" class="headerlink" title="差异表达矩阵"></a>差异表达矩阵</h3><pre><code>fit &lt;- lmFit( data, design )fit2 &lt;- contrasts.fit( fit, contrast.matrix ) fit2 &lt;- eBayes( fit2 )allDiff=topTable(fit2,adjust=&#39;fdr&#39;,number=200000)write.table(allDiff,file=&quot;alldiff.xls&quot;,sep=&quot;\t&quot;,quote=F)</code></pre><h1 id="mRNA-seq数据差异表达"><a href="#mRNA-seq数据差异表达" class="headerlink" title="mRNA-seq数据差异表达"></a>mRNA-seq数据差异表达</h1><h2 id="GBM表达矩阵下载"><a href="#GBM表达矩阵下载" class="headerlink" title="GBM表达矩阵下载"></a>GBM表达矩阵下载</h2><pre><code>library(TCGAbiolinks) library(SummarizedExperiment) query &lt;- GDCquery(project = &#39;TCGA-GBM&#39;,                    data.category = &quot;Transcriptome Profiling&quot;,                    data.type = &quot;Gene Expression Quantification&quot;,                    workflow.type = &quot;HTSeq - Counts&quot;)GDCdownload(query, method = &quot;api&quot;, files.per.chunk = 100)expdat &lt;- GDCprepare(query = query)expr = assay(expdat)expr = as.data.frame(expr)save(expr,file = &#39;expr.Rdata&#39;)</code></pre><h2 id="提取mRNA数据"><a href="#提取mRNA数据" class="headerlink" title="提取mRNA数据"></a>提取mRNA数据</h2><pre><code>{  library(rtracklayer)  library(dplyr)  gtf &lt;- import(&#39;Homo_sapiens.GRCh38.98.chr.gtf.gz&#39;)   gtf_df &lt;- as.data.frame(gtf)    gene_df &lt;- select(gtf_df,                    c(gene_id,gene_name,gene_biotype))    index &lt;- duplicated(gene_df$gene_id)   gene_df = gene_df[!index,]  dim(gene_df)  mRNA = gene_df[gene_df$gene_biotype == &#39;protein_coding&#39;,1]  exprSet = expr[na.omit(match(mRNA,rownames(expr))),]}</code></pre><h2 id="分组-1"><a href="#分组-1" class="headerlink" title="分组"></a>分组</h2><pre><code># 癌症组织和癌旁组织library(stringr)tumor &lt;- colnames(exprSet)[as.integer(substr(colnames(exprSet),14,15)) &lt; 10]normal &lt;- colnames(exprSet)[as.integer(substr(colnames(exprSet),14,15)) &gt;= 10]tumor_sample &lt;- exprSet[,tumor]normal_sample &lt;- exprSet[,normal]exprSet_by_group &lt;- cbind(tumor_sample,normal_sample)group_list &lt;- c(rep(&#39;tumor&#39;,ncol(tumor_sample)),rep(&#39;normal&#39;,ncol(normal_sample)))</code></pre><h2 id="差异表达-1"><a href="#差异表达-1" class="headerlink" title="差异表达"></a>差异表达</h2><h3 id="表达矩阵-1"><a href="#表达矩阵-1" class="headerlink" title="表达矩阵"></a>表达矩阵</h3><pre><code>data = exprSet_by_group</code></pre><h3 id="分组矩阵-1"><a href="#分组矩阵-1" class="headerlink" title="分组矩阵"></a>分组矩阵</h3><pre><code>group_list = factor(group_list)design &lt;- model.matrix( ~0 + group_list)colnames( design ) = levels(group_list)rownames( design ) = colnames(data)</code></pre><h3 id="差异表达矩阵-1"><a href="#差异表达矩阵-1" class="headerlink" title="差异表达矩阵"></a>差异表达矩阵</h3><pre><code>DGElist &lt;- DGEList( counts = data)keep &lt;- filterByExpr(DGElist, design) # 过滤低表达量基因DGElist &lt;- DGElist[ keep_gene, , keep.lib.sizes = FALSE ]DGElist &lt;- calcNormFactors( DGElist ) # 表达矩阵TMM标准化v &lt;- voom(DGElist, design)fit &lt;- lmFit(v, design)cont.matrix &lt;- makeContrasts(contrasts = c(&#39;tumor-normal&#39;), levels = design)fit &lt;- contrasts.fit(fit, cont.matrix)fit &lt;- eBayes(fit)nrDEG_limma_voom = topTable(fit, coef = &#39;tumor-normal&#39;,n = Inf)</code></pre><h2 id="注释文件下载地址"><a href="#注释文件下载地址" class="headerlink" title="注释文件下载地址"></a>注释文件下载地址</h2><p><a href="http://ftp.ensembl.org/pub/" target="_blank" rel="noopener">HG38-gtf</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 转录组 </category>
+          
+          <category> R包 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 差异表达 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度学习</title>
+      <link href="/posts/33115a55.html"/>
+      <url>/posts/33115a55.html</url>
+      
+        <content type="html"><![CDATA[<p>DEEP</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习</title>
+      <link href="/posts/498ab7d9.html"/>
+      <url>/posts/498ab7d9.html</url>
+      
+        <content type="html"><![CDATA[<p>ML</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>linux</title>
+      <link href="/posts/9211474f.html"/>
+      <url>/posts/9211474f.html</url>
+      
+        <content type="html"><![CDATA[<p>linux</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python</title>
+      <link href="/posts/a4d4b8b8.html"/>
+      <url>/posts/a4d4b8b8.html</url>
+      
+        <content type="html"><![CDATA[<p>PY</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
       
       
     </entry>
