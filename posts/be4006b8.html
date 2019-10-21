@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>linux | Hexo</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="linux | Hexo">
+  <title>limma包差异表达 | Hexo</title>
+  <meta name="keywords" content=" 差异表达 ">
+  <meta name="description" content="limma包差异表达 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="个人简介杜军 深圳大学在读研究生，喜欢研究R、python、机器学习、深度学习、大数据、精准医疗。 联系方式 QQ：709485275 邮箱：dujunbioPG@163.com">
 <meta property="og:type" content="website">
@@ -395,9 +395,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-limma包差异表达" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux</h1>
+        <h1 class="article-title">limma包差异表达</h1>
     
     <div class="article-meta">
         
@@ -405,20 +405,28 @@
         
         <span class="book">
             
-                <a href="javascript:" data-rel="linux">linux</a>
+                <a href="javascript:" data-rel="转录组">转录组</a>/
+            
+                <a href="javascript:" data-rel="R包">R包</a>
             
         </span>
         
         
+        <span class="tag">
+            
+            <a href="javascript:" class="color5">差异表达</a>
+            
+        </span>
+        
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-21 09:05:28'>2019-10-20 22:57</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-21 10:22:01'>2019-10-20 23:00</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1</span>
+        <span>字数:918</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -448,7 +456,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-非原始芯片数据差异表达"><span class="toc-text">1 非原始芯片数据差异表达</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-GSE13507数据下载到表达矩阵"><span class="toc-text">1.1 GSE13507数据下载到表达矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#GSE13507数据下载"><span class="toc-text">GSE13507数据下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在GEO网站下载探针注释文件"><span class="toc-text">在GEO网站下载探针注释文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#筛选探针"><span class="toc-text">筛选探针</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分位数标准化"><span class="toc-text">分位数标准化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组"><span class="toc-text">分组</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-差异表达"><span class="toc-text">1.2 差异表达</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表达矩阵"><span class="toc-text">表达矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组矩阵"><span class="toc-text">分组矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#差异表达矩阵"><span class="toc-text">差异表达矩阵</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-mRNA-seq数据差异表达"><span class="toc-text">2 mRNA-seq数据差异表达</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-GBM表达矩阵下载"><span class="toc-text">2.1 GBM表达矩阵下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-提取mRNA数据"><span class="toc-text">2.2 提取mRNA数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-分组"><span class="toc-text">2.3 分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-差异表达"><span class="toc-text">2.4 差异表达</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表达矩阵-1"><span class="toc-text">表达矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组矩阵-1"><span class="toc-text">分组矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#差异表达矩阵-1"><span class="toc-text">差异表达矩阵</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-注释文件下载地址"><span class="toc-text">2.5 注释文件下载地址</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -464,7 +472,141 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>linux</p>
+        <h1 id="1-非原始芯片数据差异表达"><a href="#1-非原始芯片数据差异表达" class="headerlink" title="1 非原始芯片数据差异表达"></a>1 非原始芯片数据差异表达</h1><h2 id="1-1-GSE13507数据下载到表达矩阵"><a href="#1-1-GSE13507数据下载到表达矩阵" class="headerlink" title="1.1 GSE13507数据下载到表达矩阵"></a>1.1 GSE13507数据下载到表达矩阵</h2><h3 id="GSE13507数据下载"><a href="#GSE13507数据下载" class="headerlink" title="GSE13507数据下载"></a>GSE13507数据下载</h3><pre><code class="lang-r">setwd(&quot;./1.GEO_datasets/GSE13507&quot;)
+library(GEOquery)
+  gset = getGEO(&#39;GSE13507&#39;,destdir = &#39;.&#39;,getGPL = F,
+                AnnotGPL = T)
+  gset = gset[[1]]  
+  expr = exprs(gset)        # 表达矩阵
+  pdata = pData(gset)       # 样本信息
+  gset@annotation           # 查看芯片平台
+</code></pre>
+<h3 id="在GEO网站下载探针注释文件"><a href="#在GEO网站下载探针注释文件" class="headerlink" title="在GEO网站下载探针注释文件"></a>在GEO网站下载探针注释文件</h3><pre><code class="lang-r">probe = read.table(file = &#39;GPL6102-11574.txt&#39;,
+                     sep = &#39;\t&#39;,
+                     quote = &#39;&#39;,
+                     comment.char = &#39;#&#39;, # 过滤掉&#39;GPL6102-11574.txt&#39;文件中以‘#’开头的注释信息
+                     header = T,
+                     fill = T,           #  如果文件中某行的数据少于其他行，则自动添加空白域。     
+                     stringsAsFactors = F) # 字符串不改为因子
+
+ids = probe[probe$Symbol != &#39;&#39;,
+              c(1,13)] # 提取探针和geneID
+</code></pre>
+<h3 id="筛选探针"><a href="#筛选探针" class="headerlink" title="筛选探针"></a>筛选探针</h3><pre><code class="lang-r">library(dplyr)
+  colnames(ids)
+  expr = as.data.frame(expr)
+  expr$ID = rownames(expr)
+  #ids = ids[-grep(&#39;///&#39;,ids$Gene.Symbol),]      # 一个探针对应多个基因，去除
+  exprSet = inner_join(ids,expr,by = &#39;ID&#39;)   #  探针没有对应基因，去除
+
+library(limma)
+  exprSet= avereps(exprSet[,-c(1,2)],          # 多个探针对应一个基因，取均值
+                   ID = exprSet$Symbol)
+  exprSet = as.data.frame(exprSet)
+
+pdf(file = &#39;rowbox.pdf&#39;)
+  p &lt;- boxplot(exprSet,outline=FALSE,las=2,col = &#39;blue&#39;,xaxt = &#39;n&#39;,ann = F)
+  title(main = list(&#39;Before normalization&#39;,cex = 2 ,font = 2),
+  xlab = list(&#39;Sample list&#39;,cex = 1.5,font = 2),
+  ylab = &#39;&#39;,line = 0.7)
+  mtext(&#39;Expression value&#39;,side = 2,padj = -3,font = 2,cex = 1.5)
+  dev.off()
+</code></pre>
+<p><img src="/images/1570064431325-1571624407656.png" alt=""></p>
+<h3 id="分位数标准化"><a href="#分位数标准化" class="headerlink" title="分位数标准化"></a>分位数标准化</h3><pre><code class="lang-r">library(limma)
+  normalized_expr = normalizeBetweenArrays(exprSet) # 分位数标准化 method默认为quantile
+  #rt=log2(rt) 有时还需log2变换
+
+pdf(file = &#39;normalized_box.pdf&#39;)
+  p1 &lt;- boxplot(normalized_expr,outline=FALSE,las=2,col = &#39;red&#39;,xaxt = &#39;n&#39;,ann = F)
+  title(main = list(&#39;Normalization&#39;,cex = 2 ,font = 2),
+        xlab = list(&#39;Sample list&#39;,cex = 1.5,font = 2),
+        ylab = &#39;&#39;,line = 0.7)
+  mtext(&#39;Expression value&#39;,side = 2,padj = -3,font = 2,cex = 1.5)
+  dev.off()
+</code></pre>
+<p><img src="/images/1570064471270-1571624433712.png" alt=""></p>
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><pre><code class="lang-r">group_list = pdata$title
+  #table(pdata$title) # 查看样品信息
+  control      = normalized_expr[,grep(&#39;Control&#39;,group_list)]
+  surrounding  = normalized_expr[,grep(&#39;Surrounding&#39;,group_list)]
+  cancer       = normalized_expr[,grep(&#39;cancer&#39;,group_list)]
+  tumor        = normalized_expr[,grep(&#39;tumor&#39;,group_list)]
+  exprSet1 = cbind(cancer,tumor,control,surrounding)
+  group_list = c(rep(&#39;tumor&#39;,ncol(cancer) + ncol(tumor)),
+                 rep(&#39;normal&#39;,ncol(control) + ncol(surrounding)))
+</code></pre>
+<h2 id="1-2-差异表达"><a href="#1-2-差异表达" class="headerlink" title="1.2 差异表达"></a>1.2 <strong>差异表达</strong></h2><h3 id="表达矩阵"><a href="#表达矩阵" class="headerlink" title="表达矩阵"></a>表达矩阵</h3><pre><code class="lang-r">data = exprSet1
+</code></pre>
+<h3 id="分组矩阵"><a href="#分组矩阵" class="headerlink" title="分组矩阵"></a>分组矩阵</h3><pre><code class="lang-r">group_list = factor(group_list)
+design &lt;- model.matrix( ~0 + group_list)
+colnames( design ) = levels(group_list)
+rownames( design ) = colnames(data)
+contrast.matrix &lt;- makeContrasts( &quot;tumor-normal&quot;, levels = design)
+</code></pre>
+<h3 id="差异表达矩阵"><a href="#差异表达矩阵" class="headerlink" title="差异表达矩阵"></a>差异表达矩阵</h3><pre><code class="lang-r">fit &lt;- lmFit( data, design )
+fit2 &lt;- contrasts.fit( fit, contrast.matrix ) 
+fit2 &lt;- eBayes( fit2 )
+allDiff=topTable(fit2,adjust=&#39;fdr&#39;,number=200000)
+write.table(allDiff,file=&quot;alldiff.xls&quot;,sep=&quot;\t&quot;,quote=F)
+</code></pre>
+<h1 id="2-mRNA-seq数据差异表达"><a href="#2-mRNA-seq数据差异表达" class="headerlink" title="2 mRNA-seq数据差异表达"></a>2 mRNA-seq数据差异表达</h1><h2 id="2-1-GBM表达矩阵下载"><a href="#2-1-GBM表达矩阵下载" class="headerlink" title="2.1 GBM表达矩阵下载"></a>2.1 GBM表达矩阵下载</h2><pre><code class="lang-r">library(TCGAbiolinks)
+ library(SummarizedExperiment)
+ query &lt;- GDCquery(project = &#39;TCGA-GBM&#39;, 
+                   data.category = &quot;Transcriptome Profiling&quot;, 
+                   data.type = &quot;Gene Expression Quantification&quot;, 
+                   workflow.type = &quot;HTSeq - Counts&quot;)
+GDCdownload(query, method = &quot;api&quot;, files.per.chunk = 100)
+expdat &lt;- GDCprepare(query = query)
+expr = assay(expdat)
+expr = as.data.frame(expr)
+save(expr,file = &#39;expr.Rdata&#39;)
+</code></pre>
+<h2 id="2-2-提取mRNA数据"><a href="#2-2-提取mRNA数据" class="headerlink" title="2.2 提取mRNA数据"></a>2.2 提取mRNA数据</h2><pre><code class="lang-r">{
+  library(rtracklayer)
+  library(dplyr)
+  gtf &lt;- import(&#39;Homo_sapiens.GRCh38.98.chr.gtf.gz&#39;) 
+  gtf_df &lt;- as.data.frame(gtf)  
+  gene_df &lt;- select(gtf_df,
+                    c(gene_id,gene_name,gene_biotype))  
+  index &lt;- duplicated(gene_df$gene_id) 
+  gene_df = gene_df[!index,]
+  dim(gene_df)
+  mRNA = gene_df[gene_df$gene_biotype == &#39;protein_coding&#39;,1]
+  exprSet = expr[na.omit(match(mRNA,rownames(expr))),]
+}
+</code></pre>
+<h2 id="2-3-分组"><a href="#2-3-分组" class="headerlink" title="2.3 分组"></a>2.3 分组</h2><pre><code class="lang-r"># 癌症组织和癌旁组织
+library(stringr)
+tumor &lt;- colnames(exprSet)[as.integer(substr(colnames(exprSet),14,15)) &lt; 10]
+normal &lt;- colnames(exprSet)[as.integer(substr(colnames(exprSet),14,15)) &gt;= 10]
+
+tumor_sample &lt;- exprSet[,tumor]
+normal_sample &lt;- exprSet[,normal]
+
+exprSet_by_group &lt;- cbind(tumor_sample,normal_sample)
+group_list &lt;- c(rep(&#39;tumor&#39;,ncol(tumor_sample)),rep(&#39;normal&#39;,ncol(normal_sample)))
+</code></pre>
+<h2 id="2-4-差异表达"><a href="#2-4-差异表达" class="headerlink" title="2.4 差异表达"></a>2.4 差异表达</h2><h3 id="表达矩阵-1"><a href="#表达矩阵-1" class="headerlink" title="表达矩阵"></a>表达矩阵</h3><pre><code class="lang-r">data = exprSet_by_group
+</code></pre>
+<h3 id="分组矩阵-1"><a href="#分组矩阵-1" class="headerlink" title="分组矩阵"></a>分组矩阵</h3><pre><code class="lang-r">group_list = factor(group_list)
+design &lt;- model.matrix( ~0 + group_list)
+colnames( design ) = levels(group_list)
+rownames( design ) = colnames(data)
+</code></pre>
+<h3 id="差异表达矩阵-1"><a href="#差异表达矩阵-1" class="headerlink" title="差异表达矩阵"></a>差异表达矩阵</h3><pre><code class="lang-r">DGElist &lt;- DGEList( counts = data)
+keep &lt;- filterByExpr(DGElist, design) # 过滤低表达量基因
+DGElist &lt;- DGElist[ keep_gene, , keep.lib.sizes = FALSE ]
+DGElist &lt;- calcNormFactors( DGElist ) # 表达矩阵TMM标准化
+
+v &lt;- voom(DGElist, design)
+fit &lt;- lmFit(v, design)
+cont.matrix &lt;- makeContrasts(contrasts = c(&#39;tumor-normal&#39;), levels = design)
+fit &lt;- contrasts.fit(fit, cont.matrix)
+fit &lt;- eBayes(fit)
+nrDEG_limma_voom = topTable(fit, coef = &#39;tumor-normal&#39;,n = Inf)
+</code></pre>
+<h2 id="2-5-注释文件下载地址"><a href="#2-5-注释文件下载地址" class="headerlink" title="2.5 注释文件下载地址"></a>2.5 注释文件下载地址</h2><p><a href="http://ftp.ensembl.org/pub/" target="_blank" rel="noopener">HG38-gtf</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 dujunbioPG@163.com </span>
@@ -478,12 +620,12 @@
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>linux</p>
-    <p><span class="copy-title">文章字数:</span><span class="post-count">1</span></p>
+    <p><span class="copy-title">文章标题:</span>limma包差异表达</p>
+    <p><span class="copy-title">文章字数:</span><span class="post-count">918</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="bioPG">bioPG</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-20, 22:57:49</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-21, 09:05:28</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/posts/9211474f.html" title="linux">http://yoursite.com/posts/9211474f.html</a>
+    <p><span class="copy-title">发布时间:</span>2019-10-20, 23:00:01</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-21, 10:22:01</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/posts/be4006b8.html" title="limma包差异表达">http://yoursite.com/posts/be4006b8.html</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
