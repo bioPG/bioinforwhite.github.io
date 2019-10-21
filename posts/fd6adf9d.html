@@ -145,6 +145,14 @@
     
         
             
+            <li><div data-rel="linux">linux<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="转录组"><i class="fold iconfont icon-right"></i>转录组<small>(1)</small></div>
                 
                     <ul class="sub hide">
@@ -161,11 +169,7 @@
     
         
             
-        
-    
-        
-            
-            <li><div data-rel="linux">linux<small>(1)</small></div>
+            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
                 
             </li>
             
@@ -177,23 +181,15 @@
                 
                     <ul class="sub hide">
                         
-                        <li><div data-rel="R-基础">R-基础<small>(1)</small></div>
-                            
-                        </li>
-                            
                         <li><div data-rel="统计分析">统计分析<small>(1)</small></div>
                             
                         </li>
                             
+                        <li><div data-rel="基础">基础<small>(1)</small></div>
+                            
+                        </li>
+                            
                     </ul>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="python">python<small>(1)</small></div>
                 
             </li>
             
@@ -209,7 +205,7 @@
     
         
             
-            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+            <li><div data-rel="python">python<small>(1)</small></div>
                 
             </li>
             
@@ -224,6 +220,10 @@
             <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
                 
             </li>
+            
+        
+    
+        
             
         
     
@@ -294,11 +294,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">数据结构</a>
+        <a href="javascript:" class="color5">线性回归</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">线性回归</a>
+        <a href="javascript:" class="color5">数据结构</a>
     </li>
     
     <div class="clearfix"></div>
@@ -311,14 +311,6 @@
     
     <nav id="title-list-nav">
         
-        <a  class="转录组 R包 "
-           href="/posts/be4006b8.html"
-           data-tag="差异表达"
-           data-author="" >
-            <span class="post-title" title="limma包差异表达">limma包差异表达</span>
-            <span class="post-date" title="2019-10-20 23:00:01">2019/10/20</span>
-        </a>
-        
         <a  class="linux "
            href="/posts/9211474f.html"
            data-tag=""
@@ -327,20 +319,20 @@
             <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
         </a>
         
-        <a  class="R R-基础 "
-           href="/posts/7fa6ac17.html"
-           data-tag="数据结构"
+        <a  class="转录组 R包 "
+           href="/posts/be4006b8.html"
+           data-tag="差异表达"
            data-author="" >
-            <span class="post-title" title="R-基础（一）：数据结构">R-基础（一）：数据结构</span>
-            <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
+            <span class="post-title" title="limma包差异表达">limma包差异表达</span>
+            <span class="post-date" title="2019-10-20 23:00:01">2019/10/20</span>
         </a>
         
-        <a  class="python "
-           href="/posts/a4d4b8b8.html"
+        <a  class="实用工具 "
+           href="/posts/787e3980.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="python">python</span>
-            <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
+            <span class="post-title" title="使用工具">使用工具</span>
+            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
         </a>
         
         <a  class="R 统计分析 "
@@ -359,12 +351,12 @@
             <span class="post-date" title="2019-10-20 23:00:57">2019/10/20</span>
         </a>
         
-        <a  class="实用工具 "
-           href="/posts/787e3980.html"
+        <a  class="python "
+           href="/posts/a4d4b8b8.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="使用工具">使用工具</span>
-            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
+            <span class="post-title" title="python">python</span>
+            <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
         </a>
         
         <a  class="机器学习 "
@@ -381,6 +373,14 @@
            data-author="" >
             <span class="post-title" title="深度学习">深度学习</span>
             <span class="post-date" title="2019-10-20 22:59:51">2019/10/20</span>
+        </a>
+        
+        <a  class="R 基础 "
+           href="/posts/7fa6ac17.html"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="R-基础（一）：数据结构">R-基础（一）：数据结构</span>
+            <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
         </a>
         
     </nav>
@@ -702,7 +702,7 @@ L_{yy}&=\sum_{i=1}^n(y_i-\overline{y})^2
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#差异表达','#数据结构','#线性回归',],
+            'data': ['#差异表达','#线性回归','#数据结构',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
