@@ -6,14 +6,15 @@
   <meta name="keywords" content=" 数据框 ">
   <meta name="description" content="数据框（一）：单表操作 | Hexo">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="个人简介杜军 深圳大学在读研究生，喜欢研究R、python、机器学习、深度学习、大数据、精准医疗。 联系方式 QQ：709485275 邮箱：dujunbioPG@163.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于&amp;留言板">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;about&#x2F;index.html">
+<meta name="description" content="通常我们将EXCLE表格或者分隔符分割的文本文件导入R中进行处理，这些数据在R语言称为数据框也可以叫做数据集，数据框中的行、列也分别称为观测和变量。 应用于数据框的函数和R包有很多，目前对数据框处理速度比较快的两个R包是鼎鼎大名的dplyr包和tidyr包，这两个包最主要的三个作用分别是：  单个数据框的操作 两个数据框的操作 数据框的重塑  接下来我将通过三篇文章分别介绍这三类操作、首先介绍的是">
+<meta name="keywords" content="数据框">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据框（一）：单表操作">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;posts&#x2F;9cecd8f.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="个人简介杜军 深圳大学在读研究生，喜欢研究R、python、机器学习、深度学习、大数据、精准医疗。 联系方式 QQ：709485275 邮箱：dujunbioPG@163.com">
+<meta property="og:description" content="通常我们将EXCLE表格或者分隔符分割的文本文件导入R中进行处理，这些数据在R语言称为数据框也可以叫做数据集，数据框中的行、列也分别称为观测和变量。 应用于数据框的函数和R包有很多，目前对数据框处理速度比较快的两个R包是鼎鼎大名的dplyr包和tidyr包，这两个包最主要的三个作用分别是：  单个数据框的操作 两个数据框的操作 数据框的重塑  接下来我将通过三篇文章分别介绍这三类操作、首先介绍的是">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-19T10:46:39.321Z">
+<meta property="og:updated_time" content="2019-10-22T15:17:52.411Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -169,7 +170,7 @@
     
         
             
-            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+            <li><div data-rel="python">python<small>(1)</small></div>
                 
             </li>
             
@@ -201,6 +202,14 @@
     
         
             
+            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="数学">数学<small>(1)</small></div>
                 
             </li>
@@ -209,7 +218,7 @@
     
         
             
-            <li><div data-rel="python">python<small>(1)</small></div>
+            <li><div data-rel="深度学习">深度学习<small>(1)</small></div>
                 
             </li>
             
@@ -218,14 +227,6 @@
         
             
             <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="深度学习">深度学习<small>(1)</small></div>
                 
             </li>
             
@@ -298,11 +299,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">数据框</a>
+        <a href="javascript:" class="color5">数据结构</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">数据结构</a>
+        <a href="javascript:" class="color4">数据框</a>
     </li>
     
     <div class="clearfix"></div>
@@ -331,12 +332,12 @@
             <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
         </a>
         
-        <a  class="实用工具 "
-           href="/posts/787e3980.html"
+        <a  class="python "
+           href="/posts/a4d4b8b8.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="使用工具">使用工具</span>
-            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
+            <span class="post-title" title="python">python</span>
+            <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
         </a>
         
         <a  class="R 数据科学 "
@@ -347,20 +348,12 @@
             <span class="post-date" title="2019-10-22 00:01:10">2019/10/22</span>
         </a>
         
-        <a  class="数学 "
-           href="/posts/fe7e69f4.html"
+        <a  class="实用工具 "
+           href="/posts/787e3980.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="数学">数学</span>
-            <span class="post-date" title="2019-10-20 23:00:57">2019/10/20</span>
-        </a>
-        
-        <a  class="python "
-           href="/posts/a4d4b8b8.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="python">python</span>
-            <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
+            <span class="post-title" title="使用工具">使用工具</span>
+            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
         </a>
         
         <a  class="R 统计分析 "
@@ -369,6 +362,22 @@
            data-author="" >
             <span class="post-title" title="多元统计学（一）：线性回归">多元统计学（一）：线性回归</span>
             <span class="post-date" title="2019-10-21 10:12:10">2019/10/21</span>
+        </a>
+        
+        <a  class="数学 "
+           href="/posts/fe7e69f4.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="数学">数学</span>
+            <span class="post-date" title="2019-10-20 23:00:57">2019/10/20</span>
+        </a>
+        
+        <a  class="深度学习 "
+           href="/posts/33115a55.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="深度学习">深度学习</span>
+            <span class="post-date" title="2019-10-20 22:59:51">2019/10/20</span>
         </a>
         
         <a  class="机器学习 "
@@ -387,12 +396,12 @@
             <span class="post-date" title="2019-10-21 16:07:45">2019/10/21</span>
         </a>
         
-        <a  class="深度学习 "
-           href="/posts/33115a55.html"
-           data-tag=""
+        <a  class="R 数据科学 "
+           href="/posts/7fa6ac17.html"
+           data-tag="数据结构"
            data-author="" >
-            <span class="post-title" title="深度学习">深度学习</span>
-            <span class="post-date" title="2019-10-20 22:59:51">2019/10/20</span>
+            <span class="post-title" title="数据结构">数据结构</span>
+            <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
         </a>
         
         <a  class="R 数据科学 "
@@ -401,14 +410,6 @@
            data-author="" >
             <span class="post-title" title="数据框（一）：单表操作">数据框（一）：单表操作</span>
             <span class="post-date" title="2019-10-22 22:53:37">2019/10/22</span>
-        </a>
-        
-        <a  class="R 数据科学 "
-           href="/posts/7fa6ac17.html"
-           data-tag="数据结构"
-           data-author="" >
-            <span class="post-title" title="数据结构">数据结构</span>
-            <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
         </a>
         
     </nav>
@@ -449,7 +450,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-22 23:12:22'>2019-10-22 22:53</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-22 23:17:52'>2019-10-22 22:53</time>
         
     </div>
     <div class="article-meta">
@@ -591,8 +592,8 @@ head(filter_iris)
 <td>存在</td>
 </tr>
 <tr>
-<td>\</td>
-<td></td>
+<td>`</td>
+<td>`</td>
 <td>或</td>
 </tr>
 <tr>
@@ -771,7 +772,7 @@ mutate(df, gpm = 1/mpg)
     <p><span class="copy-title">文章字数:</span><span class="post-count">1.9k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="bioPG">bioPG</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-22, 22:53:37</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-22, 23:12:22</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-22, 23:17:52</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/posts/9cecd8f.html" title="数据框（一）：单表操作">http://yoursite.com/posts/9cecd8f.html</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -854,7 +855,7 @@ mutate(df, gpm = 1/mpg)
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#差异表达','#线性回归','#数据框','#数据结构',],
+            'data': ['#差异表达','#线性回归','#数据结构','#数据框',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
