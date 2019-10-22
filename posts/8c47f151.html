@@ -21,7 +21,7 @@
 
 <link href="/css/style.css?v=1.0.1" rel="stylesheet">
 
-<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+<link href="/css/hl_theme/atom-dark.css?v=1.0.1" rel="stylesheet">
 
 <link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -153,6 +153,14 @@
     
         
             
+            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="转录组"><i class="fold iconfont icon-right"></i>转录组<small>(1)</small></div>
                 
                     <ul class="sub hide">
@@ -170,14 +178,6 @@
         
             
             <li><div data-rel="python">python<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
                 
             </li>
             
@@ -205,6 +205,10 @@
     
         
             
+            <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
+                
+            </li>
+            
         
     
         
@@ -216,10 +220,6 @@
         
     
         
-            
-            <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
-                
-            </li>
             
         
     
@@ -319,6 +319,14 @@
             <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
         </a>
         
+        <a  class="实用工具 "
+           href="/posts/787e3980.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="使用工具">使用工具</span>
+            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
+        </a>
+        
         <a  class="转录组 R包 "
            href="/posts/be4006b8.html"
            data-tag="差异表达"
@@ -333,14 +341,6 @@
            data-author="" >
             <span class="post-title" title="python">python</span>
             <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
-        </a>
-        
-        <a  class="实用工具 "
-           href="/posts/787e3980.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="使用工具">使用工具</span>
-            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
         </a>
         
         <a  class="R 数据科学 "
@@ -359,6 +359,14 @@
             <span class="post-date" title="2019-10-21 10:12:10">2019/10/21</span>
         </a>
         
+        <a  class="机器学习 "
+           href="/posts/498ab7d9.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="机器学习">机器学习</span>
+            <span class="post-date" title="2019-10-20 22:59:36">2019/10/20</span>
+        </a>
+        
         <a  class="数学 "
            href="/posts/fe7e69f4.html"
            data-tag=""
@@ -373,14 +381,6 @@
            data-author="" >
             <span class="post-title" title="目录和文件">目录和文件</span>
             <span class="post-date" title="2019-10-21 16:07:45">2019/10/21</span>
-        </a>
-        
-        <a  class="机器学习 "
-           href="/posts/498ab7d9.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="机器学习">机器学习</span>
-            <span class="post-date" title="2019-10-20 22:59:36">2019/10/20</span>
         </a>
         
         <a  class="深度学习 "
@@ -431,7 +431,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-22 09:38:46'>2019-10-22 00:01</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-22 10:00:46'>2019-10-22 00:01</time>
         
     </div>
     <div class="article-meta">
@@ -607,40 +607,40 @@ signif(3.475, digits=2)
 ## [1] 3.5
 </code></pre><h2 id="2-3-数值型向量的排序"><a href="#2-3-数值型向量的排序" class="headerlink" title="2.3 数值型向量的排序"></a>2.3 数值型向量的排序</h2><pre><code>x = c(3,5,4,1,6,7,8)
 
-# 返回排序后的向量
+#返回排序后的向量
 sort(x) 
 ## [1] 1 3 4 5 6 7 8
 
-# 返回元素对应的排名，升序
+#返回元素对应的排名，升序
 rank(x)
 ## [1] 2 4 3 1 5 6 7
 
-# 返回排序后的向量元素在原向量中的索引，升序
+#返回排序后的向量元素在原向量中的索引，升序
 order(x)
 ## [1] 4 1 3 2 5 6 7
 </code></pre><h2 id="2-4-字符型向量的操作"><a href="#2-4-字符型向量的操作" class="headerlink" title="2.4 字符型向量的操作"></a>2.4 字符型向量的操作</h2><pre><code>x = c(&#39;aa_11&#39;, &#39;ab_22&#39;, &#39;cc_33&#39;)
 
-# 输出字符串的长度
+#输出字符串的长度
 nchar(x)
 ## [1] 5 5 5
 
-# 输出向量的长度
+#输出向量的长度
 length(x)
 ## [1] 3
 
-# 字符串大写
+#字符串大写
 toupper(x)
 ## [1] &quot;AA_11&quot; &quot;AB_22&quot; &quot;CC_33&quot;
 
-# 字符串小写
+#字符串小写
 tolower(x)
 ## [1] &quot;aa_11&quot; &quot;bb_22&quot; &quot;cc_33&quot;
 
-# 提取向量中的字符串的子串
+#提取向量中的字符串的子串
 substr(x, 1, 3)
 ## [1] &quot;aa_&quot; &quot;ab_&quot; &quot;cc_&quot;
 
-# 按&quot;_&quot;分割字符串，生成列表
+#按&quot;_&quot;分割字符串，生成列表
 strsplit(x, &#39;_&#39;)
 ## [[1]]
 ## [1] &quot;aa&quot; &quot;11&quot;
@@ -651,17 +651,16 @@ strsplit(x, &#39;_&#39;)
 ## [[3]]
 ## [1] &quot;cc&quot; &quot;33&quot;
 
-# 合并向量
+#合并向量
 y = c(&#39;A&#39;,&#39;B&#39;,&#39;C&#39;)
 paste(x,y,sep = &#39;.&#39;)
 ## [1] &quot;aa_11.A&quot; &quot;ab_22.B&quot; &quot;cc_33.C&quot;
 
-# 查看字符串是否在向量中，返回位置
+#查看字符串是否在向量中，返回位置
 grep(&#39;a&#39;,x)
 ## [1] 1 2
 </code></pre><h2 id="2-5-向量的去重"><a href="#2-5-向量的去重" class="headerlink" title="2.5 向量的去重"></a>2.5 向量的去重</h2><p><code>unique()</code>函数去重</p>
-<pre><code># 去重复
-a = c(2,3,2,2)
+<pre><code>a = c(2,3,2,2)
 unique(a)
 ## [1] 2 3
 </code></pre><p><code>duplicated()</code>函数去重</p>
@@ -676,27 +675,27 @@ vec[!index]
 y = 3:6
 z = 4:8
 
-# 取交集
+#取交集
 intersect(x, y)
 ## [1] 3 4 5
 
-# 并集
+#并集
 union(x,y)
 ## [1] 2 3 4 5 6
 
-# 取补集
+#取补集
 setdiff(x,y)
 ## [1] 2
 
-# 多个向量取交集
+#多个向量取交集
 Reduce(intersect,list(x,y,z))
 ## [1] 4 5
 
-# 多个向量取并集
+#多个向量取并集
 Reduce(union,list(x,y,z))
 ## [1] 2 3 4 5 6 7 8
 
-# 不同长度向量合并为数据框
+#不同长度向量合并为数据框
 mylist = list(a = 1:3,b = 2:6,c = 2:8)
 data.frame(lapply(mylist, &quot;length&lt;-&quot;, max(lengths(mylist))))
 ##    a  b c
@@ -724,7 +723,7 @@ data.frame(lapply(mylist, &quot;length&lt;-&quot;, max(lengths(mylist))))
     <p><span class="copy-title">文章字数:</span><span class="post-count">1.2k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="bioPG">bioPG</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-22, 00:01:10</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-22, 09:38:46</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-22, 10:00:46</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/posts/8c47f151.html" title="向量">http://yoursite.com/posts/8c47f151.html</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
@@ -756,46 +755,6 @@ data.frame(lapply(mylist, &quot;length&lt;-&quot;, max(lengths(mylist))))
 
 
 
-    
-        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    "HTML-CSS": {
-        preferredFont: "TeX",
-        availableFonts: ["STIX","TeX"],
-        linebreaks: { automatic:true },
-        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
-    },
-    tex2jax: {
-        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
-        processEscapes: true,
-        ignoreClass: "tex2jax_ignore|dno",
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    TeX: {
-        equationNumbers: { autoNumber: "AMS" },
-        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
-        Macros: { href: "{}" }
-    },
-    messageStyle: "none"
-    });
-</script>
-<!-- 给MathJax元素添加has-jax class -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for(i=0; i < all.length; i += 1) {
-            all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-    });
-</script>
-<!-- 通过连接CDN加载MathJax的js代码 -->
-<script type="text/javascript" async
-        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<input type="hidden" id="MathJax-js"
-        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</input>
     
 
 
