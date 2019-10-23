@@ -161,34 +161,6 @@
     
         
             
-            <li><div data-rel="linux">linux<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="python">python<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-        
-    
-        
-            
             <li><div data-rel="R"><i class="fold iconfont icon-right"></i>R<small>(5)</small></div>
                 
                     <ul class="sub hide">
@@ -209,6 +181,42 @@
     
         
             
+            <li><div data-rel="python">python<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="linux">linux<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
             <li><div data-rel="数学">数学<small>(1)</small></div>
                 
             </li>
@@ -220,14 +228,6 @@
             <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
                 
             </li>
-            
-        
-    
-        
-            
-        
-    
-        
             
         
     
@@ -250,7 +250,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="12">
-<input type="hidden" id="yelog_site_word_count" value="7.7k">
+<input type="hidden" id="yelog_site_word_count" value="7.8k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -323,12 +323,12 @@
             <span class="post-date" title="2019-10-20 23:00:01">2019/10/20</span>
         </a>
         
-        <a  class="linux "
-           href="/posts/9211474f.html"
+        <a  class="R 数据科学 "
+           href="/posts/8c47f151.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="linux">linux</span>
-            <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
+            <span class="post-title" title="向量">向量</span>
+            <span class="post-date" title="2019-10-22 00:01:10">2019/10/22</span>
         </a>
         
         <a  class="python "
@@ -337,6 +337,14 @@
            data-author="" >
             <span class="post-title" title="python">python</span>
             <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
+        </a>
+        
+        <a  class="linux "
+           href="/posts/9211474f.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="linux">linux</span>
+            <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
         </a>
         
         <a  class="实用工具 "
@@ -363,14 +371,6 @@
             <span class="post-date" title="2019-10-20 23:00:57">2019/10/20</span>
         </a>
         
-        <a  class="R 数据科学 "
-           href="/posts/8c47f151.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="向量">向量</span>
-            <span class="post-date" title="2019-10-22 00:01:10">2019/10/22</span>
-        </a>
-        
         <a  class="机器学习 "
            href="/posts/498ab7d9.html"
            data-tag=""
@@ -388,6 +388,14 @@
         </a>
         
         <a  class="R 数据科学 "
+           href="/posts/57747df0.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="目录和文件">目录和文件</span>
+            <span class="post-date" title="2019-10-21 16:07:45">2019/10/21</span>
+        </a>
+        
+        <a  class="R 数据科学 "
            href="/posts/9cecd8f.html"
            data-tag="数据框"
            data-author="" >
@@ -401,14 +409,6 @@
            data-author="" >
             <span class="post-title" title="数据结构">数据结构</span>
             <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
-        </a>
-        
-        <a  class="R 数据科学 "
-           href="/posts/57747df0.html"
-           data-tag=""
-           data-author="" >
-            <span class="post-title" title="目录和文件">目录和文件</span>
-            <span class="post-date" title="2019-10-21 16:07:45">2019/10/21</span>
         </a>
         
     </nav>
@@ -449,7 +449,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2019-10-23 09:31:33'>2019-10-22 22:53</time>
+        创建时间:<time class="date" title='更新时间: 2019-10-23 10:44:35'>2019-10-22 22:53</time>
         
     </div>
     <div class="article-meta">
@@ -564,7 +564,7 @@ head(filter_iris)
 ## 4          7.2         3.6          6.1         2.5 virginica
 ## 5          7.7         3.8          6.7         2.2 virginica
 ## 6          7.7         2.6          6.9         2.3 virginica
-</code></pre><p><code>filter()</code>函数可以进行布尔型操作：或（<code>|</code>）、且(<code>&amp;</code>)、非(<code>!</code>)，以及逻辑型操作：<code>TRUE</code>、<code>FALSE</code>，下表是常见的逻辑型操作：</p>
+</code></pre><p><code>filter()</code>函数可以进行布尔型操作：或（<code>|</code>）、且(<code>&amp;</code>)、非(<code>!</code>)；以及逻辑型操作：<code>TRUE</code>、<code>FALSE</code>，下表是常见的逻辑型操作：</p>
 <div class="table-container">
 <table>
 <thead>
@@ -758,7 +758,7 @@ mutate(df, gpm = 1/mpg)
     <p><span class="copy-title">文章字数:</span><span class="post-count">1.9k</span></p>
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="bioPG">bioPG</a></p>
     <p><span class="copy-title">发布时间:</span>2019-10-22, 22:53:37</p>
-    <p><span class="copy-title">最后更新:</span>2019-10-23, 09:31:33</p>
+    <p><span class="copy-title">最后更新:</span>2019-10-23, 10:44:35</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/posts/9cecd8f.html" title="数据框（一）：单表操作">http://yoursite.com/posts/9cecd8f.html</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
