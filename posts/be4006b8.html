@@ -145,22 +145,6 @@
     
         
             
-            <li><div data-rel="linux">linux<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
-            <li><div data-rel="python">python<small>(1)</small></div>
-                
-            </li>
-            
-        
-    
-        
-            
             <li><div data-rel="转录组"><i class="fold iconfont icon-right"></i>转录组<small>(1)</small></div>
                 
                     <ul class="sub hide">
@@ -177,7 +161,15 @@
     
         
             
-            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+            <li><div data-rel="python">python<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="linux">linux<small>(1)</small></div>
                 
             </li>
             
@@ -205,6 +197,18 @@
     
         
             
+        
+    
+        
+            
+            <li><div data-rel="实用工具">实用工具<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
             <li><div data-rel="数学">数学<small>(1)</small></div>
                 
             </li>
@@ -216,10 +220,6 @@
             <li><div data-rel="机器学习">机器学习<small>(1)</small></div>
                 
             </li>
-            
-        
-    
-        
             
         
     
@@ -298,11 +298,11 @@
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color4">数据框</a>
+        <a href="javascript:" class="color5">数据结构</a>
     </li>
     
     <li class="article-tag-list-item">
-        <a href="javascript:" class="color5">数据结构</a>
+        <a href="javascript:" class="color4">数据框</a>
     </li>
     
     <div class="clearfix"></div>
@@ -315,12 +315,12 @@
     
     <nav id="title-list-nav">
         
-        <a  class="linux "
-           href="/posts/9211474f.html"
-           data-tag=""
+        <a  class="转录组 R包 "
+           href="/posts/be4006b8.html"
+           data-tag="差异表达"
            data-author="" >
-            <span class="post-title" title="linux">linux</span>
-            <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
+            <span class="post-title" title="limma包差异表达">limma包差异表达</span>
+            <span class="post-date" title="2019-10-20 23:00:01">2019/10/20</span>
         </a>
         
         <a  class="python "
@@ -331,20 +331,12 @@
             <span class="post-date" title="2019-10-20 22:52:02">2019/10/20</span>
         </a>
         
-        <a  class="转录组 R包 "
-           href="/posts/be4006b8.html"
-           data-tag="差异表达"
-           data-author="" >
-            <span class="post-title" title="limma包差异表达">limma包差异表达</span>
-            <span class="post-date" title="2019-10-20 23:00:01">2019/10/20</span>
-        </a>
-        
-        <a  class="实用工具 "
-           href="/posts/787e3980.html"
+        <a  class="linux "
+           href="/posts/9211474f.html"
            data-tag=""
            data-author="" >
-            <span class="post-title" title="使用工具">使用工具</span>
-            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
+            <span class="post-title" title="linux">linux</span>
+            <span class="post-date" title="2019-10-20 22:57:49">2019/10/20</span>
         </a>
         
         <a  class="R 数据科学 "
@@ -353,6 +345,14 @@
            data-author="" >
             <span class="post-title" title="向量">向量</span>
             <span class="post-date" title="2019-10-22 00:01:10">2019/10/22</span>
+        </a>
+        
+        <a  class="实用工具 "
+           href="/posts/787e3980.html"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="使用工具">使用工具</span>
+            <span class="post-date" title="2019-10-20 23:01:03">2019/10/20</span>
         </a>
         
         <a  class="R 统计分析 "
@@ -396,19 +396,19 @@
         </a>
         
         <a  class="R 数据科学 "
-           href="/posts/9cecd8f.html"
-           data-tag="数据框"
-           data-author="" >
-            <span class="post-title" title="数据框（一）：单表操作">数据框（一）：单表操作</span>
-            <span class="post-date" title="2019-10-22 22:53:37">2019/10/22</span>
-        </a>
-        
-        <a  class="R 数据科学 "
            href="/posts/7fa6ac17.html"
            data-tag="数据结构"
            data-author="" >
             <span class="post-title" title="数据结构">数据结构</span>
             <span class="post-date" title="2019-10-21 09:13:06">2019/10/21</span>
+        </a>
+        
+        <a  class="R 数据科学 "
+           href="/posts/9cecd8f.html"
+           data-tag="数据框"
+           data-author="" >
+            <span class="post-title" title="数据框（一）：单表操作">数据框（一）：单表操作</span>
+            <span class="post-date" title="2019-10-22 22:53:37">2019/10/22</span>
         </a>
         
     </nav>
@@ -761,7 +761,7 @@ nrDEG_limma_voom = topTable(fit, coef = &#39;tumor-normal&#39;,n = Inf)
     /*作者、标签的自动补全*/
     $(function () {
         $('.search').AutoComplete({
-            'data': ['#差异表达','#线性回归','#数据框','#数据结构',],
+            'data': ['#差异表达','#线性回归','#数据结构','#数据框',],
             'itemHeight': 20,
             'width': 418
         }).AutoComplete('show');
